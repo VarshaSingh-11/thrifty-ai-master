@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "NunitoSans";
+    font-style: "Black";
+    font-weight: 800;
+    src: url("../../fonts/nunito-sans/NunitoSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    font-style: "Regular";
+    font-weight: 400;
+    src: url("../../fonts/nunito-sans/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    font-style: "ExtraLight";
+    font-weight: 300;
+    src: url("../../fonts/nunito-sans/NunitoSans-ExtraLight.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-440px * 3))}
+}
+
+@keyframes arrowSidewise{
+    0% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(-3px);
+    }
+}
+
+.whyUsWrapper{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "NunitoSans";
+    font-size: 20px;
+    margin: 40px 100px;
+    .whyUsTop{
+        display: flex;
+        align-items: center;
+        margin: 80px 100px 100px 100px;
+        .whyUsTopLeft{
+            // height: 600px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            margin-bottom: 40px;
+            p{
+                width: 60%;
+            }
+            :nth-child(1){
+                font-weight: 800;
+                font-size: 62px;
+                text-transform: uppercase;
+                margin-bottom: 25px;
+            }
+            :nth-child(2){
+                width: 100% !important;
+                font-weight: 800;
+                font-size: 40px;
+                text-transform: uppercase;
+                margin-bottom: 25px;
+
+            }
+            :nth-child(3){
+                font-style: normal;
+                font-weight: 300;
+                font-size: 24px;
+                width: 70%;
+            }
+        }
+        .whyUsTopRight{
+            flex: 1;
+            font-weight: 300;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            font-size: 16px;
+            margin-bottom: 40px;
+            
+            .card {
+                transition: transform 2s;
+                transform-style: preserve-3d;
+                width: 70%;
+                height: 125px;
+            }
+
+            .flipCard{
+                transform: rotateY(180deg);
+            }
+              
+            .front, .back {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                backface-visibility: hidden;
+                background-color: white;
+                border-radius: 4px;
+                color: black;
+                height: 280px;
+                padding: 20px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                
+                .cardContent{
+                    p{
+                        line-height: 22px;
+                    }
+                    :nth-child(1){
+                        font-weight: 800;
+                        text-align: center;
+                        font-size: 24px;
+                        margin-bottom: 15px;
+                        text-transform: uppercase;
+                    }
+                    :nth-child(3){
+                        font-family: 'Inter', sans-serif;
+                        font-style: italic;
+                        font-weight: 300;
+                        text-align: justify;
+
+                    }
+                    :nth-child(2){
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 300;
+                        text-align: justify;
+
+                    }
+                    :nth-child(4){
+                        font-weight: 300;
+                        font-family: 'Inter', sans-serif;
+                        text-align: justify;
+
+                    }
+                }
+                .cardNextButton{
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+                    cursor: pointer;
+                    animation: arrowSidewise 1s linear infinite;
+                }   
+            }
+              
+            //   .front {
+            //     border: 2px solid red;
+            //   }
+              
+            .back {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    .whyUsBottomWrapper{
+        margin: 0 -100px 0 -100px;
+        
+        .whyUsBottom{
+            padding: 40px 0;
+            background-color: white;
+            width: 100%;
+            .carouselDesktop{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                .whyUsThriftyLogo{
+                    display: flex;
+                    // justify-content: center;
+                    // flex: 0.5;
+                    img{
+                        padding:0 100px;
+                        height: 170px;
+                    }
+                }
+            }
+        }
+    }
+}
+.whyUsDesign{
+    width: 100vw;
+    max-width:100%; 
+    position: relative;
+    top: 10px;
+}
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background: black;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+    border-radius: 3px;
+    display: none !important;
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		// width: calc(440px * 6); 
+	}
+	
+	.slide {
+        margin-right: 100px;
+	}
+}
+
+@media(max-width: 1800px){
+    .whyUsTopLeft{
+        p{
+            width: 80% !important;
+        }
+    }
+    .card{
+        width: 80% !important;
+    }
+}
+    
+@media(max-width: 1400px){
+    .whyUsTop{
+        flex-direction: column;
+        align-items: normal !important;
+        margin: 0px 0px 150px 0px !important;
+        .whyUsTopLeft{
+            align-items: center;
+            p{
+                text-align: center;
+                width: 100% !important;
+            }
+        }
+        .whyUsTopRight{
+            justify-content: center !important;
+        }
+    }
+    .whyUsThriftyLogo{
+        display: none !important;
+    }
+    .card{
+        min-width: 340px;
+        max-width: 500px;
+        font-size: 13px !important;
+    }
+    .whyUsBottomLeft{
+        display: none !important;
+    }
+    .whyUsBottomRight{
+        margin-right: 0 !important;
+    }
+    .whyUsDesign{
+        left: 0;
+    }
+}
+
+@media(max-width: 1200px){
+    .whyUsBottom{
+        justify-content: center;
+        padding-bottom: 0 !important;
+        background-color: black !important;
+
+    }
+    .whyUsDesign{
+        display: none !important;
+    }
+    .carouselDesktop{
+        display: none !important;
+    }
+    .whyUsBottomLeft{
+        display: none !important;
+    }
+
+    .slider{
+        display: block !important;
+    }
+    
+    .whyUsTop{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        .whyUsTopLeft{
+            p{
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media(max-width: 992px){
+    .whyUsTopLeft{
+        margin-bottom: 20px !important;
+        :nth-child(1){
+            font-size: 42px !important;
+            margin-bottom: 15px !important;
+        }
+        :nth-child(2){
+            font-size: 20px !important;
+            margin-bottom: 15px !important;
+        }
+        :nth-child(3){
+            font-size: 18px !important;
+        }
+    }
+    .whyUsBottom{
+        padding: 0 !important;
+    }
+    .whyUsWrapper{
+        margin-bottom: 0px !important;
+    }  
+}
+@media(max-width: 768px){
+    .whyUsBottomWrapper{
+        width: calc(100vw + 90px);
+    }
+    .whyUsWrapper{
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}

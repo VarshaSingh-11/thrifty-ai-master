@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+@font-face {
+  font-family: "NunitoSans";
+  font-style: "Black";
+  font-weight: 800;
+  src: url("../../fonts/nunito-sans/NunitoSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  font-style: "Regular";
+  font-weight: 400;
+  src: url("../../fonts/nunito-sans/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NunitoSans";
+  font-style: "ExtraLight";
+  font-weight: 300;
+  src: url("../../fonts/nunito-sans/NunitoSans-ExtraLight.ttf");
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-440px * 3));
+            transform: translateX(calc(-440px * 3));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-440px * 3));
+            transform: translateX(calc(-440px * 3));
+  }
+}
+
+@-webkit-keyframes arrowSidewise {
+  0% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+}
+
+@keyframes arrowSidewise {
+  0% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+}
+
+.whyUsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  font-family: "NunitoSans";
+  font-size: 20px;
+  margin: 40px 100px;
+}
+
+.whyUsWrapper .whyUsTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 80px 100px 100px 100px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopLeft {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopLeft p {
+  width: 60%;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopLeft :nth-child(1) {
+  font-weight: 800;
+  font-size: 62px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopLeft :nth-child(2) {
+  width: 100% !important;
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopLeft :nth-child(3) {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  width: 70%;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .card {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 70%;
+  height: 125px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .flipCard {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front, .whyUsWrapper .whyUsTop .whyUsTopRight .back {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  height: 280px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front .cardContent p, .whyUsWrapper .whyUsTop .whyUsTopRight .back .cardContent p {
+  line-height: 22px;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front .cardContent :nth-child(1), .whyUsWrapper .whyUsTop .whyUsTopRight .back .cardContent :nth-child(1) {
+  font-weight: 800;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front .cardContent :nth-child(3), .whyUsWrapper .whyUsTop .whyUsTopRight .back .cardContent :nth-child(3) {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front .cardContent :nth-child(2), .whyUsWrapper .whyUsTop .whyUsTopRight .back .cardContent :nth-child(2) {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front .cardContent :nth-child(4), .whyUsWrapper .whyUsTop .whyUsTopRight .back .cardContent :nth-child(4) {
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .front .cardNextButton, .whyUsWrapper .whyUsTop .whyUsTopRight .back .cardNextButton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  cursor: pointer;
+  -webkit-animation: arrowSidewise 1s linear infinite;
+          animation: arrowSidewise 1s linear infinite;
+}
+
+.whyUsWrapper .whyUsTop .whyUsTopRight .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.whyUsWrapper .whyUsBottomWrapper {
+  margin: 0 -100px 0 -100px;
+}
+
+.whyUsWrapper .whyUsBottomWrapper .whyUsBottom {
+  padding: 40px 0;
+  background-color: white;
+  width: 100%;
+}
+
+.whyUsWrapper .whyUsBottomWrapper .whyUsBottom .carouselDesktop {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.whyUsWrapper .whyUsBottomWrapper .whyUsBottom .carouselDesktop .whyUsThriftyLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.whyUsWrapper .whyUsBottomWrapper .whyUsBottom .carouselDesktop .whyUsThriftyLogo img {
+  padding: 0 100px;
+  height: 170px;
+}
+
+.whyUsDesign {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  top: 10px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  display: none !important;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slide {
+  margin-right: 100px;
+}
+
+@media (max-width: 1800px) {
+  .whyUsTopLeft p {
+    width: 80% !important;
+  }
+  .card {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .whyUsTop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: normal !important;
+        -ms-flex-align: normal !important;
+            align-items: normal !important;
+    margin: 0px 0px 150px 0px !important;
+  }
+  .whyUsTop .whyUsTopLeft {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .whyUsTop .whyUsTopLeft p {
+    text-align: center;
+    width: 100% !important;
+  }
+  .whyUsTop .whyUsTopRight {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .whyUsThriftyLogo {
+    display: none !important;
+  }
+  .card {
+    min-width: 340px;
+    max-width: 500px;
+    font-size: 13px !important;
+  }
+  .whyUsBottomLeft {
+    display: none !important;
+  }
+  .whyUsBottomRight {
+    margin-right: 0 !important;
+  }
+  .whyUsDesign {
+    left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .whyUsBottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 0 !important;
+    background-color: black !important;
+  }
+  .whyUsDesign {
+    display: none !important;
+  }
+  .carouselDesktop {
+    display: none !important;
+  }
+  .whyUsBottomLeft {
+    display: none !important;
+  }
+  .slider {
+    display: block !important;
+  }
+  .whyUsTop {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .whyUsTop .whyUsTopLeft p {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .whyUsTopLeft {
+    margin-bottom: 20px !important;
+  }
+  .whyUsTopLeft :nth-child(1) {
+    font-size: 42px !important;
+    margin-bottom: 15px !important;
+  }
+  .whyUsTopLeft :nth-child(2) {
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+  }
+  .whyUsTopLeft :nth-child(3) {
+    font-size: 18px !important;
+  }
+  .whyUsBottom {
+    padding: 0 !important;
+  }
+  .whyUsWrapper {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyUsBottomWrapper {
+    width: calc(100vw + 90px);
+  }
+  .whyUsWrapper {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
+/*# sourceMappingURL=whyUs.css.map */

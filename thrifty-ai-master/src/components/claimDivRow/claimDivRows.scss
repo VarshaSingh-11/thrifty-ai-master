@@ -1,0 +1,23 @@
+.claimDivRowWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 60px;
+    .claimDivWrapper{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .claimDivRowWrapper{
+        flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 768px){
+    
+  }
+  
+  @media (max-width: 360px){
+   
+  }
+  

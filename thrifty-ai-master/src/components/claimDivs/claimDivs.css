@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Inter";
+  font-style: "Black";
+  font-weight: 800;
+  src: url("../../fonts/inter/Inter-Black.otf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: "Regular";
+  font-weight: 400;
+  src: url("../../fonts/inter/Inter-Regular.otf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: "SemiBold";
+  font-weight: 600;
+  src: url("../../fonts/inter/Inter-SemiBold.otf");
+}
+
+.styledDivWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  padding: 3px;
+  margin-bottom: -3px;
+  background-color: white;
+  -webkit-clip-path: polygon(90% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(90% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
+}
+
+.styledDivWrapper .claimImg {
+  width: 100%;
+  -webkit-clip-path: polygon(90% 0, 100% 19%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(90% 0, 100% 19%, 100% 100%, 0 100%, 0 0);
+}
+
+.styledDivWrapper .bodyTxt {
+  padding-top: 12px;
+  font-family: "Inter";
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.claimDivWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.claimDivWrapper .claimDivStartingWrapper {
+  width: 280px;
+  height: 17px;
+}
+
+.claimDivWrapper .claimDivStartingWrapper img {
+  width: 100%;
+}
+
+.claimDivWrapper .claimDivEndingWrapper {
+  width: 280px;
+}
+
+.claimDivWrapper .claimDivEndingWrapper img {
+  width: 100%;
+}
+/*# sourceMappingURL=claimDivs.css.map */
